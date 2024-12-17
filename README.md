@@ -39,7 +39,7 @@ git push heroku main
 
 heroku open
 
-
+---------------------------------------------------------------------------------------------------------------------
 #### MacOS and Linux
 
 git clone https://github.com/cmartinruiz/KrakenCryptocoins
