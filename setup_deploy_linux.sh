@@ -2,7 +2,7 @@
 
 # Clone the repository
 echo "Cloning the repository..."
-git clone https://github.com/cmartinruiz/KrakenCryptocoins.git
+git clone https://github.com/cmartinruiz/KrakenCryptocoins/.git
 cd KrakenCryptocoins || exit
 
 # Create and activate a virtual environment
