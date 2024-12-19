@@ -8,8 +8,8 @@ Top 20 KRAKEN cryptocoins comparison using Krakenex API
 
 ### 2. Run in your terminal the following code:
 git clone https://github.com/cmartinruiz/KrakenCryptocoins.git
-cd KrakenCryptocoins
 
+cd KrakenCryptocoins
 
 #### Windows:
 
