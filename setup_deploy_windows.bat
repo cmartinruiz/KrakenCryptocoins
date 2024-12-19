@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 REM Run the main script
 echo Running the main script...
-python martinruiz.py
+python MartinRuiz.py
 
 REM Run unit tests
 echo Running unit tests...
@@ -24,7 +24,7 @@ python -m unittest discover
 
 REM Create a Procfile for Heroku
 echo Creating Procfile...
-echo web: python martinruiz.py > Procfile
+echo web: python MartinRuiz.py > Procfile
 
 REM Install Heroku CLI if not installed
 where heroku >nul 2>nul
