@@ -13,7 +13,7 @@ cd KrakenCryptocoins
 
 python -m venv myenv
 
-pip instal -r requirements.txt
+pip install -r requirements.txt
 
 
 #### Windows:
