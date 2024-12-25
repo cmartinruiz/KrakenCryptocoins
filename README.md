@@ -15,6 +15,8 @@ python -m venv myenv
 
 pip install -r requirements.txt
 
+pip download .r requirements.txt
+
 
 #### Windows:
 
