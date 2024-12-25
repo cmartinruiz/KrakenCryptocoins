@@ -1,8 +1,8 @@
 # KrakenCryptocoins
 Top 20 KRAKEN cryptocoins comparison using Krakenex API
 ## Instructions:
-### 1. Check in your terminal (e.g. PowerShell)
-* The terminal is being executed as Administrator
+### 1. Check that:
+* PowerShell is being executed as Administrator
 * Python version is 13.1 or above (python --version)
 * Git version (git --version) or download it in https://git-scm.com/
 
@@ -17,7 +17,7 @@ myenv\Scripts\activate
 
 pip install -r requirements.txt
 
-pip download .r requirements.txt
+python MartinRuiz.py
 
 
 #### Windows:
