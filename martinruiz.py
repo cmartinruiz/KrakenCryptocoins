@@ -17,12 +17,30 @@ Universidad de Navarra
 ## Extracción de datos
 """
 
-import sys
-print("Python executable:", sys.executable)
-print("Python path:", sys.path)
+# Extracción y manejo de datos
+import requests
+import pandas as pd
+from datetime import datetime
+import time
+import numpy as np
 
+# Krakenex
 import krakenex
-print("krakenex imported successfully")
+
+# Vsiualización de datos
+import matplotlib.pyplot as plt
+import plotly.graph_objs as go
+## Dash app for the interactive plot
+from dash import Dash, dcc, html, Input, Output
+import dash_bootstrap_components as dbc
+import shutil
+import os
+import io
+import itertools
+from itertools import cycle
+
+# Testing y manejo de errores
+import unittest
 
 # Get TOP20 sorted by price (EUR) list
 def get_top20EUR():
