@@ -17,8 +17,6 @@ Universidad de Navarra
 ## Extracción de datos
 """
 
-import krakenex
-
 # Get TOP20 sorted by price (EUR) list
 def get_top20EUR():
     # Initialize Kraken API client
