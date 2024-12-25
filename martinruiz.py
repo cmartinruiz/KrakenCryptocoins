@@ -1,5 +1,3 @@
-import krakenex
-
 # -*- coding: utf-8 -*-
 """MartinRuiz.ipynb
 
@@ -18,6 +16,13 @@ Universidad de Navarra
 
 ## Extracción de datos
 """
+
+import sys
+print("Python executable:", sys.executable)
+print("Python path:", sys.path)
+
+import krakenex
+print("krakenex imported successfully")
 
 # Get TOP20 sorted by price (EUR) list
 def get_top20EUR():
