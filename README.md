@@ -11,6 +11,11 @@ git clone https://github.com/cmartinruiz/KrakenCryptocoins.git
 
 cd KrakenCryptocoins
 
+python -m venv myenv
+
+pip instal -r requirements.txt
+
+
 #### Windows:
 
 setup_deploy_windows.bat
