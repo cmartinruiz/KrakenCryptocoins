@@ -45,7 +45,7 @@ if %ERRORLEVEL% NEQ 0 (
 
 REM Create a Procfile for Heroku
 echo Creating Procfile...
-echo web: python MartinRuiz.ipynb > Procfile
+echo web: python MartinRuiz.py > Procfile
 
 REM Check for Heroku CLI
 where heroku >nul 2>nul
