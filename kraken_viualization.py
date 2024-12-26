@@ -11,7 +11,7 @@ from dash import Dash, dcc, html, Input, Output
 import dash_bootstrap_components as dbc
 import plotly.graph_objs as go
 import pandas as pd
-from data_processing import fetch_top_coins, bollinger_bands
+from Kraken_Data import fetch_top_coins, bollinger_bands
 
 # Fetch initial data
 since_date = 1672531200  # "2023-01-01"
