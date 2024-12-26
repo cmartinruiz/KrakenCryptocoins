@@ -27,7 +27,7 @@ class TestKrakenAPI(unittest.TestCase):
         """
         Test the `date_unix` function for correct UNIX conversion.
         """
-        date_str = "2023-01-01"
+        date_str = "2023-01-01 00:00:00"
         result = date_unix(date_str)
         self.assertIsInstance(result, int)
         self.assertEqual(result, 1672531200)  # Check against known UNIX timestamp
