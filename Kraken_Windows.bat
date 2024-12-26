@@ -26,12 +26,19 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b
 )
 
-REM Run the main script
-echo Running the main script...
-pip install notebook
-jupyter nbconvert --to notebook --execute MartinRuiz.py
+REM Run Kraken_Data.py (data processing script)
+echo Running Kraken_Data.py...
+python Kraken_Data.py
 if %ERRORLEVEL% NEQ 0 (
-    echo "Failed to execute the Jupyter Notebook. Exiting."
+    echo "Failed to execute Kraken_Data.py. Exiting."
+    exit /b
+)
+
+REM Run Kraken_Visualization.py (visualization script)
+echo Running Kraken_Visualization.py...
+python Kraken_Visualization.py
+if %ERRORLEVEL% NEQ 0 (
+    echo "Failed to execute Kraken_Visualization.py. Exiting."
     exit /b
 )
 
@@ -45,7 +52,7 @@ if %ERRORLEVEL% NEQ 0 (
 
 REM Create a Procfile for Heroku
 echo Creating Procfile...
-echo web: python MartinRuiz.py > Procfile
+echo web: python Kraken_Data.py > Procfile
 
 REM Check for Heroku CLI
 where heroku >nul 2>nul
