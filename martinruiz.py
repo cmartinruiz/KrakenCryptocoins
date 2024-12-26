@@ -99,9 +99,10 @@ print(coins)
 
 
 #Date format
-def date_unix(date_str):
-  dt = datetime.strptime(date_str, "%Y-%m-%d")
-  return int(time.mktime(dt.timetuple()))
+def date_unix(date_string):
+    # Example implementation
+    dt = datetime.datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+    return int(time.mktime(dt.timetuple()))
 
 #Get data
 def get_kraken_data(pair, since=None, interval=1440):
@@ -155,7 +156,7 @@ def fetch_top_coins(since_date, interval_1440=1440, interval_60=60):
         return pd.DataFrame(), pd.DataFrame()
 
 #Parameters
-since_date = date_unix("2023-01-01")
+since_date = date_unix("2023-01-01 00:00:00")
 
 #Final df
 kraken_1440, kraken_60 = fetch_top_coins(since_date)
