@@ -38,5 +38,5 @@ if __name__ == '__main__':
 """
 
 # Save file named 'test_MartinRuiz.py'
-with open('test_MartinRuiz.py', 'w') as f:
+with open('test_MartinRuiz.ipynb', 'w') as f:
     f.write(test_code)
