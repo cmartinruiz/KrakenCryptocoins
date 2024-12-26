@@ -2,7 +2,7 @@
 
 # Clone the repository
 echo "Cloning the repository..."
-git clone https://github.com/cmartinruiz/KrakenCryptocoins/.git
+git clone https://github.com/cmartinruiz/KrakenCryptocoins.git
 cd KrakenCryptocoins || exit
 
 # Create and activate a virtual environment
@@ -16,7 +16,8 @@ pip install -r requirements.txt
 
 # Run the main script
 echo "Running the main script..."
-python MartinRuiz.py
+pip install notebook
+jupyter nbconvert --to notebook --execute MartinRuiz.py
 
 # Run unit tests
 echo "Running unit tests..."
