@@ -11,22 +11,6 @@ git clone https://github.com/cmartinruiz/KrakenCryptocoins.git
 
 cd KrakenCryptocoins
 
-python -m venv myenv
-
-myenv\Scripts\activate
-
-pip install -r requirements.txt
-
-python MartinRuiz.py
-
-
-#### Windows:
-
-setup_deploy_windows.bat
-
----------------------------------------------------------------------------------------------------------------------
-#### MacOS and Linux
-
 chmod +x setup_deploy_linux.sh
 
-./setup_deploy_linux.sh
+./Setup_Deploy.sh
