@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 # Run the main script
 echo "Running the main script..."
-python MartinRuiz.ipynb
+python MartinRuiz.py
 
 # Run unit tests
 echo "Running unit tests..."
@@ -24,7 +24,7 @@ python -m unittest discover
 
 # Create a Procfile for Heroku
 echo "Creating Procfile..."
-echo "web: python MartinRuiz.ipynb" > Procfile
+echo "web: python MartinRuiz.py" > Procfile
 
 # Install Heroku CLI if not installed
 if ! command -v heroku &> /dev/null
