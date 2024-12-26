@@ -14,18 +14,33 @@ source myenv/bin/activate
 echo "Installing required packages..."
 pip install -r requirements.txt
 
-# Run the main script
-echo "Running the main script..."
-pip install notebook
-jupyter nbconvert --to notebook --execute MartinRuiz.py
+# Run Kraken_Data.py (data processing script)
+echo "Running Kraken_Data.py..."
+python Kraken_Data.py
+if [ $? -ne 0 ]; then
+    echo "Failed to execute Kraken_Data.py. Exiting."
+    exit 1
+fi
+
+# Run Kraken_Visualization.py (visualization script)
+echo "Running Kraken_Visualization.py..."
+python Kraken_Visualization.py
+if [ $? -ne 0 ]; then
+    echo "Failed to execute Kraken_Visualization.py. Exiting."
+    exit 1
+fi
 
 # Run unit tests
 echo "Running unit tests..."
 python -m unittest discover
+if [ $? -ne 0 ]; then
+    echo "Unit tests failed. Exiting."
+    exit 1
+fi
 
 # Create a Procfile for Heroku
 echo "Creating Procfile..."
-echo "web: python MartinRuiz.py" > Procfile
+echo "web: python Kraken_Data.py" > Procfile
 
 # Install Heroku CLI if not installed
 if ! command -v heroku &> /dev/null
