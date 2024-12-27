@@ -171,11 +171,13 @@ if not kraken_60.empty:
 """## Visualización de datos"""
 
 # Bollinger Bands Calculation
+
 def bollinger_bands(data, window=20):
-    data['mean'] = data['close'].rolling(window).mean()
-    data['std'] = data['close'].rolling(window).std()
-    data['upper_band'] = data['mean'] + (data['std'] * 2)
-    data['lower_band'] = data['mean'] - (data['std'] * 2)
+    if 'mean' not in data or 'upper_band' not in data or 'lower_band' not in data:  # Check if already calculated
+        data['mean'] = data['close'].rolling(window).mean()
+        data['std'] = data['close'].rolling(window).std()
+        data['upper_band'] = data['mean'] + (data['std'] * 2)
+        data['lower_band'] = data['mean'] - (data['std'] * 2)
 
     # Create Buy/Sell signals
     data['buy_signal'] = np.where(data['close'] < data['lower_band'], 1, 0)  # Buy when price crosses below the lower band
