@@ -101,7 +101,7 @@ print(coins)
 #Date format
 def date_unix(date_string):
     # Example implementation
-    dt = datetime.datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+    dt = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
     return int(time.mktime(dt.timetuple()))
 
 #Get data
