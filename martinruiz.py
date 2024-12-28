@@ -26,7 +26,6 @@ from itertools import cycle
 # Testing y manejo de errores
 import unittest
 
-"""## Extracción de datos"""
 
 # Get TOP20 sorted by price (EUR) list
 def get_top20EUR():
@@ -153,7 +152,6 @@ if not kraken_60.empty:
     print("Kraken 60 data:")
     print(kraken_60.head())
 
-"""## Visualización de datos"""
 
 # Bollinger Bands Calculation
 
