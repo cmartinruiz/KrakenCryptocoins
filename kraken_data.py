@@ -10,7 +10,6 @@ import numpy as np
 import pytz
 
 def date_unix(date_string):
-    # Ensure the datetime object is in UTC
     dt = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
     dt = pytz.utc.localize(dt)
     return int(dt.timestamp())
