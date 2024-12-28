@@ -1,7 +1,11 @@
-# KrakenCryptocoins for Google Colab
+# KrakenCryptocoins
 Top 20 KRAKEN cryptocoins comparison using Krakenex API
 
 ## Instructions:
+
+### IMPORTANT: Ngrok account creation required
+Sign up in https://dashboard.ngrok.com/signup
+
 ### 1. Open a Google Colab and connect with GitHub:
 !apt-get install git -y
 
