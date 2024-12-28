@@ -36,9 +36,10 @@ def get_top20EUR():
 
 # Convert date string to UNIX timestamp
 def date_unix(date_string):
-    # Ensure the datetime object is in UTC
-    dt = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
-    dt = pytz.utc.localize(dt)
+    try:
+        dt = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        dt = datetime.strptime(date_string, "%Y-%m-%d")
     return int(dt.timestamp())
 
 # Fetch historical data from Kraken
