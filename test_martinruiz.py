@@ -13,13 +13,13 @@ class TestKrakenAPI(unittest.TestCase):
         """
         with patch('kraken_data.get_top20EUR') as mock_get_top20EUR:
             mock_data = pd.DataFrame({
-                'Coin': ['BTC', 'ETH'],
-                'Price (EUR)': [20000, 1500]
+                'Coin': ['BTC', 'ETH'] * 10,  # Create a list of 20 items
+                'Price (EUR)': [20000, 1500] * 10  # Repeat values
             })
             mock_get_top20EUR.return_value = mock_data
             result = get_top20EUR()
             self.assertIsInstance(result, pd.DataFrame)
-            self.assertEqual(len(result), 2)
+            self.assertEqual(len(result), 20)  # Expect 20 rows
             self.assertIn('Coin', result.columns)
             self.assertIn('Price (EUR)', result.columns)
             self.assertTrue(pd.api.types.is_numeric_dtype(result['Price (EUR)']))
