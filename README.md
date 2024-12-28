@@ -1,21 +1,21 @@
-# KrakenCryptocoins
+# KrakenCryptocoins for Google Colab
 Top 20 KRAKEN cryptocoins comparison using Krakenex API
+
 ## Instructions:
-### 1. Check that:
-* Python version 3.12 or above is installed (https://www.python.org/downloads/)
-* Git installed (https://git-scm.com/) for cloning the repository
+### 1. Open a Google Colab and connect with GitHub:
+!apt-get install git -y
 
-### 2. Run in Python App the following code:
-git clone https://github.com/cmartinruiz/KrakenCryptocoins.git
+repository = "https://github.com/cmartinruiz/KrakenCryptocoins.git"
 
-cd KrakenCryptocoins
+!git clone $repository
 
-conda create -n virtualenv python=3.12
 
-conda activate virtualenv
+### 2. Install required packages:
+%cd KrakenCryptocoins/
 
-pip install -r requirements.txt
+!pip install -r requirements.txt
 
-python MartinRuiz.py
 
-pytest test_MartinRuiz.py
+### 3. Run the main file
+!jupyter nbconvert --to notebook --execute MartinRuiz.ipynb --output output_notebook.ipynb
+
