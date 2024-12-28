@@ -16,6 +16,14 @@ from datetime import datetime
 import time
 import krakenex
 import numpy as np
+import pytz
+
+def date_unix(date_string):
+    # Ensure the datetime object is in UTC
+    dt = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+    dt = pytz.utc.localize(dt)
+    return int(dt.timestamp())
+
 
 # Get TOP20 sorted by price (EUR) list
 def get_top20EUR():
@@ -38,8 +46,10 @@ def get_top20EUR():
 
 # Convert date string to UNIX timestamp
 def date_unix(date_string):
+    # Ensure the datetime object is in UTC
     dt = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
-    return int(time.mktime(dt.timetuple()))
+    dt = pytz.utc.localize(dt)
+    return int(dt.timestamp())
 
 # Fetch historical data from Kraken
 def get_kraken_data(pair, since=None, interval=1440):
