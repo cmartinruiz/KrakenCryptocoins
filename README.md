@@ -5,6 +5,7 @@ Top 20 KRAKEN cryptocoins comparison using Krakenex API
 
 ### IMPORTANT: Required installations
 Sign up in https://dashboard.ngrok.com/signup and downoad the platform
+
 Download git in https://git-scm.com/
 
 ### 1. Open a Google Colab and connect with GitHub:
