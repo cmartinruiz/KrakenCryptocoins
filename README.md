@@ -1,23 +1,27 @@
-# KrakenCryptocoins
+# KrakenCryptocoins Instructions
 Top 20 KRAKEN cryptocoins comparison using Krakenex API
 
-## Instructions:
+## IMPORTANT: Required installations
+Download:
+* Ngrok in https://dashboard.ngrok.com/signup
+* Python in https://www.python.org/downloads/
+* git in https://git-scm.com/downloads
 
-### IMPORTANT: Required installations
-Sign up and download the program in https://dashboard.ngrok.com/signup
+### 1. After downloading Ngrok:
+#### Start an agent
+* Open ngrok.exe
+* Run ngrok http 80 (this will initializate a tunnel)
 
-Download git in https://git-scm.com/
+### 2. Open PowerSHell as Administrator
+#### Clone this repository:
+git clone https://github.com/cmartinruiz/KrakenCryptocoins
 
-### 1. Open a Google Colab Notebook:
-#### Install Git
-!apt-get install git -y
+cd KrakenCryptocoins
 
-#### Clone this repository
-repository = "https://github.com/cmartinruiz/KrakenCryptocoins.git"
-!git clone $repository
+#### Create a virtual environment
+python -m venv venv
 
-#### Check the contents of the repository
-!ls
+.\venv\Scripts\activate
 
 #### Navigate to the repository
 %cd KrakenCryptocoins/
@@ -26,7 +30,9 @@ repository = "https://github.com/cmartinruiz/KrakenCryptocoins.git"
 !pip install -r requirements.txt
 
 #### Execute the notebook
-!jupyter nbconvert --to notebook --execute MartinRuiz.ipynb --output output_notebook.ipynb
+Ipython MartinRuiz.ipynb
 
-##### IMPORTANT: You will be asked for an authorization token, copy and paste the authotoken from your ngrok account
+#### AuthoToken from ngrok
+You will be asked your AuthoToken from your ngrok account (copy & paste)
+
 
