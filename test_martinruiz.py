@@ -3,7 +3,7 @@
 import unittest
 import pandas as pd
 from unittest.mock import patch
-from Kraken_Data import get_top20EUR, fetch_top_coins, date_unix
+from kraken_data import get_top20EUR, fetch_top_coins, date_unix
 
 class TestKrakenAPI(unittest.TestCase):
 
