@@ -10,15 +10,15 @@ Original file is located at
 import unittest
 import pandas as pd
 from unittest.mock import patch
-from martinruiz.py import get_top20EUR, fetch_top_coins, date_unix
+from martinruiz import get_top20EUR, fetch_top_coins, date_unix
 
 class TestKrakenAPI(unittest.TestCase):
 
     def test_get_top20EUR(self):
-        with patch('kraken_data.get_top20EUR') as mock_get_top20EUR:
+        with patch('martinruiz.get_top20EUR') as mock_get_top20EUR:
             mock_data = pd.DataFrame({
-                'Coin': ['BTC', 'ETH'] * 10,  # Create a list of 20 items
-                'Price (EUR)': [20000, 1500] * 10  # Repeat values
+                'Coin': ['BTC', 'ETH'] * 10,
+                'Price (EUR)': [20000, 1500] * 10
             })
             mock_get_top20EUR.return_value = mock_data
             result = get_top20EUR()
@@ -40,7 +40,7 @@ class TestKrakenAPI(unittest.TestCase):
 
     def test_fetch_top_coins(self):
         since_date = date_unix("2023-01-01")
-        with patch('kraken_data.fetch_top_coins') as mock_fetch_top_coins:
+        with patch('martinruiz.fetch_top_coins') as mock_fetch_top_coins:
             mock_1440 = pd.DataFrame({'Coin': ['BTC'], 'Data': [123]})
             mock_60 = pd.DataFrame({'Coin': ['ETH'], 'Data': [456]})
             mock_fetch_top_coins.return_value = (mock_1440, mock_60)
