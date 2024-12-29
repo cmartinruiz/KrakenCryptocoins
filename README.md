@@ -9,7 +9,7 @@ Download:
 
 ### Open PowerSHell as Administrator
 #### 1. Start a tunnel in ngrok
-.\ngrok http 80
+.\ngrok authtoken "YOUR-TOKEN"
 
 #### 2. Clone this repository:
 git clone https://github.com/cmartinruiz/KrakenCryptocoins
