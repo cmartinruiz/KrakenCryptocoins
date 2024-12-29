@@ -3,34 +3,35 @@ Top 20 KRAKEN cryptocoins comparison using Krakenex API
 
 ## IMPORTANT: Required installations
 Download:
-* Ngrok in https://dashboard.ngrok.com/signup
+* ngrok in https://dashboard.ngrok.com/signup
 * Python in https://www.python.org/downloads/
 * git in https://git-scm.com/downloads
+* Jupyter Notebook in https://jupyter.org/install
 
-### Open PowerSHell as Administrator
-#### 1. Start a tunnel in ngrok
-.\ngrok authtoken "YOUR-TOKEN"
-
-#### 2. Clone this repository:
+### Open the Terminal
+#### 1. Clone this repository:
 git clone https://github.com/cmartinruiz/KrakenCryptocoins
 
 cd KrakenCryptocoins
 
-#### 3. Create a virtual environment
+#### 2. Create a virtual environment
 python -m venv venv
 
 .\venv\Scripts\activate
 
-#### 4. Navigate to the repository
-%cd KrakenCryptocoins/
-
-#### 5. Install required dependencies
+#### 4. Install required dependencies and verify succesfull installation
 !pip install -r requirements.txt
 
-#### 6. Execute the notebook
-Ipython MartinRuiz.ipynb
+pip list
+
+#### 6. Execute the notebook in Jupyter Noteboook
+Jupyter Notebook MartinRuiz.ipynb
 
 #### 7. AuthoToken from ngrok
 You will be asked your AuthoToken from your ngrok account (copy & paste)
 
+#### 7. URL to ngrok
+The code will retrieve a link similar to:
+
+Dash app is live at: NgrokTunnel: "https://9942-95-39-239-215.ngrok-free.app" -> "http://localhost:8050"
 
