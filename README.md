@@ -24,6 +24,9 @@ python -m venv venv
 
 pip list
 
+#### 5. Perform Unit Testing to martinruiz.py (an error will appear due to the required AuthToken)
+pytest
+
 #### 6. Execute the notebook in Jupyter Noteboook
 Jupyter Notebook MartinRuiz.ipynb
 
