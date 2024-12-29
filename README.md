@@ -30,8 +30,8 @@ Jupyter Notebook MartinRuiz.ipynb
 #### 7. AuthoToken from ngrok
 You will be asked your AuthoToken from your ngrok account (copy & paste)
 
-#### 7. URL to ngrok
-The code will retrieve a link similar to:
+#### 7. ngrok deployment
+The code will retrieve a similar URL to access Dash:
 
-Dash app is live at: NgrokTunnel: "https://9942-95-39-239-215.ngrok-free.app" -> "http://localhost:8050"
+Dash app is live at: NgrokTunnel: "https://URL.ngrok-free.app" -> "http://localhost:8050"
 
